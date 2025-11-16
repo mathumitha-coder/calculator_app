@@ -2,7 +2,7 @@ import streamlit as st
 
 st.title("Mathu Calculator")
 
-num1 = st.number_input("Enter first number", placeholder = "Hi its Krishna", value=0.0)
+num1 = st.number_input("Enter first number", value=0.0)
 num2 = st.number_input("Enter second number", value=0.0)
 
 operation = st.selectbox("Operations", ["Add", "Subtract", "Multiply", "Divide"])
