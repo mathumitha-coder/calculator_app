@@ -14,7 +14,7 @@ if st.button("Calculate"):
         result = x1 - x2
     elif operation == "Multiply":
         result = x1 * x2
-    elif operation == "Divide":
+    elif operation == "Divide" if x2 not 0:
         result = x1 / x2
     else:
         result = "you entered wrong number calculator developed by Mathumitha...!"
