@@ -1,22 +1,20 @@
 import streamlit as st
 
-st.title("Mathu Calculator")
+st.title("Simple Calculator")
 
-x1 = st.number_input("Enter first number", value=0.0)
-x2 = st.number_input("Enter second number", value=0.0)
+num1 = st.number_input("Enter first number", value=0.0)
+num2 = st.number_input("Enter second number", value=0.0)
 
-operation = st.selectbox("Operations", ["Add", "Subtract", "Multiply", "Divide"])
+operation = st.selectbox("Operation", ["Add", "Subtract", "Multiply", "Divide"])
 
 if st.button("Calculate"):
-    if operation == "Add", x2 not 0:
-        result = x1 + x2
+    if operation == "Add":
+        result = num1 + num2
     elif operation == "Subtract":
-        result = x1 - x2
+        result = num1 - num2
     elif operation == "Multiply":
-        result = x1 * x2
-    elif operation == "Divide":
-        result = x1 / x2
+        result = num1 * num2
     else:
-        result = "you entered wrong number calculator developed by Mathumitha...!"
+        result = "Error: Cannot divide by zero" if num2 == 0 else num1 / num2
 
-    st.success(f"Answer: {result}")
+    st.success(f"Result: {result}")
